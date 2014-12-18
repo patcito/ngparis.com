@@ -30,10 +30,7 @@ md-toolbar.md-default-theme {
 section.jumbotron {
   margin-bottom: 30px;
   padding: 1px 30px;
-  background-color: #5aadbb;
   text-align: center;
-
-  color: white;
 
   h1 {
     font-size: 3em;
@@ -45,7 +42,6 @@ section.jumbotron {
   flex-flow: row wrap;
 
   md-card {
-    width: 30%;
 
     img.pull-right {
       float: right;

@@ -4,32 +4,44 @@
 
   <md-content>
     <section class="jumbotron">
-      <h1>'Allo, 'Allo!</h1>
+      <h1>ngParis: le meetup AngularJS</h1>
       <p class="lead">
-        <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
+        <img src="assets/images/ngparis.jpeg" alt="AngularJS Paris" width=200px><br>
+        ngParis is the place to meet other pationate Angular and JS devs in Paris to learn, socialize, make connections and have fun, loads of food and drinks!
       </p>
-      <p><a class="btn" ng-href="#">Splendid!</a></p>
+      <p>
+      <a class="btn" ng-href="http://www.meetup.com/AngularJS-Paris/" target=_blank><md-button class="md-raised md-primary"><i class="fa fa-sign-in"></i> Join us!</md-button></a>
+       <a class="btn" ng-href="http://goo.gl/JQyNWi" target=_blank><md-button class="md-raised"><i class="fa fa-microphone"></i> submit a talk</md-button></a>
+       <a class="btn" ng-href="http://goo.gl/wRNWrG" target=_blank><md-button class="md-raised md-warn"><i class="fa fa-briefcase"></i> post a job offer</md-button></a>
+      </p>
     </section>
 
     <div class="techs" layout-align="center">
-      <md-card ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'">
+      <md-card ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'" flex-gt-sm="25" flex-sm="100">
         <div class="thumbnail">
           <img class="pull-right" ng-src="assets/images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
           <div class="caption">
             <h3>{{awesomeThing.title}}</h3>
-            <p>{{awesomeThing.description}}</p>
+            <p hide-md>{{awesomeThing.description}}</p>
             <p><a ng-href="{{awesomeThing.url}}">{{awesomeThing.url}}</a></p>
           </div>
         </div>
       </md-card>
+      <md-card flex=80>
+            <h3>Jobs <md-button class="md-raised md-warn">POST A JOB<md-button></h3>
+        <md-card ng-repeat="job in jobs">
+          <h4>{{job.company_name}}: {{job.title}}</h4>
+          <p>{{job.description}}</p>
+          <a href="http://angular.jobboardmaker.com/en/job_offers/{{job.slug}}" target=_blank><md-button  class="md-raised">Read more</md-button></a>
+        </md-card>
+      </md-card>
     </div>
-  </md-content>
-
   <footer>
     <md-toolbar layout="row" layout-align="center center">
-      <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
+      <p>Made with ♥ by <a href="https://twitter.com/ngParis" target=_blank>@ngParis</a></p>
     </md-toolbar>
   </footer>
+
+  </md-content>
 
 </div>
