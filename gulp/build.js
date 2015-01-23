@@ -8,7 +8,7 @@ var $ = require('gulp-load-plugins')({
 
 gulp.task('styles', ['wiredep', 'injector:css:preprocessor'], function () {
   return gulp.src(['src/app/index.scss', 'src/app/vendor.scss'])
-    .pipe($.sass({style: 'expanded'}))
+    .pipe($.sass({style: 'expanded', errLogToConsole: true, sourceComments: 'map'}))
     .on('error', function handleError(err) {
       console.error(err.toString());
       this.emit('end');
@@ -22,7 +22,7 @@ gulp.task('injector:css:preprocessor', function () {
     .pipe($.inject(gulp.src([
         'src/{app,components}/**/*.scss',
         '!src/app/index.scss',
-        '!src/app/vendor.scss' 
+        '!src/app/vendor.scss'
       ], {read: false}), {
       transform: function(filePath) {
         filePath = filePath.replace('src/app/', '');

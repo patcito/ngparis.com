@@ -12,7 +12,16 @@
       <p>
       <a class="btn" ng-href="http://www.meetup.com/AngularJS-Paris/" target=_blank><md-button class="md-raised md-primary"><i class="fa fa-sign-in"></i> Join us!</md-button></a>
        <a class="btn" ng-href="http://goo.gl/JQyNWi" target=_blank><md-button class="md-raised"><i class="fa fa-microphone"></i> submit a talk</md-button></a>
-       <a class="btn" ng-href="http://goo.gl/wRNWrG" target=_blank><md-button class="md-raised md-warn"><i class="fa fa-briefcase"></i> post a job offer</md-button></a>
+       <a class="btn" ng-href="http://goo.gl/x1PkvQ" target=_blank><md-button class="md-raised md-warn"><i class="fa fa-briefcase"></i> post a job offer</md-button></a>
+      </p>
+      <p>
+      <!--<a class="pushbullet-subscribe-widget" data-channel="ngparis" data-widget="button" data-size="small"></a>-->
+      <a href="https://twitter.com/ngParis" class="twitter-follow-button" data-show-count="false">Follow @ngParis</a>
+      <a class="pushbullet-subscribe-widget" data-channel="ngparis" data-widget="button" data-size="small" style="display: inline-block; line-height: 1px;"><iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://www.pushbullet.com:/widget.html#channel=ngparis&amp;code=2409&amp;widget=button&amp;size=small" style="height: 20px; width: 208px;"></iframe></a>
+      <p>
+      <a class=btn href="http://justyo.co/NGPARIS" target=_blank><md-button class="md-raised">Never miss a meetup, get a monthly YO!</md-button></a>
+      </p>
+      <!--<div id="yo-button"></div>-->
       </p>
     </section>
 
@@ -28,7 +37,7 @@
         </div>
       </md-card>
       <md-card flex=80>
-            <h3>Jobs <md-button class="md-raised md-warn">POST A JOB<md-button></h3>
+      <h3>Jobs <a class="btn" ng-href="http://goo.gl/wRNWrG" target=_blank><md-button class="md-raised md-warn job-btn">POST A JOB<md-button></a></h3>
         <md-card ng-repeat="job in jobs">
           <h4>{{job.company_name}}: {{job.title}}</h4>
           <p>{{job.description}}</p>

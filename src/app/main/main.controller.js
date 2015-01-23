@@ -6,6 +6,19 @@ angular.module('ngParis')
       $scope.jobs = jobs;
       console.log(jobs);
     });
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    //(function(){var a=document.createElement('script');
+     //a.type='text/javascript';a.async=true;a.src='https://widget.pushbullet.com/embed.js';
+     //var b=document.getElementsByTagName('script')[0];
+     //b.parentNode.insertBefore(a,b);})();
+  //var _yoData = {
+    //"username": "NGPARIS",
+    //"trigger": "Never miss a meetup, get a monthly YO!"
+  //};
+  //var s = document.createElement("script");
+  //s.type = "text/javascript";
+  //s.src = "//yoapp.s3.amazonaws.com/js/yo-button.js";
+  //(document.head || document.getElementsByTagName("head")[0]).appendChild(s);
     $scope.awesomeThings = [
       {
         'title': 'AngularJS',
